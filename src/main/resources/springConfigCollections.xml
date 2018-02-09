@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="myContoller3Bean" class="com.spring.core.collections.di.MyController3">
+		<property name="map">
+			<map>
+				<entry key="One" value="1" />
+				<entry key="Two" value="2" />
+				<entry key="Three" value="3" />
+			</map>
+		</property>
+
+		<property name="list">
+			<list>
+				<value>abcd</value>
+				<value>dcef</value>
+			</list>
+		</property>
+
+		<property name="set">
+			<set>
+				<value>setvalue1</value>
+				<value>setValue2</value>
+			</set>
+		</property>
+
+		<property name="properties">
+			<props>
+				<prop key="props1">Properties1</prop>
+				<prop key="props2">Properties2</prop>
+			</props>
+		</property>
+	</bean>
+</beans>

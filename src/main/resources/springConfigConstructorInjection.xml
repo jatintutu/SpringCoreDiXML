@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="myRepository2Bean" class="com.spring.core.constructor.di.MyRepository2"/>
+	
+	<bean id="myService2Bean" class="com.spring.core.constructor.di.MyService2">
+		<constructor-arg index="0" ref="myRepository2Bean"/>
+		<constructor-arg index="1" value="18"/>
+	</bean>
+	
+	<bean id="myController2Bean" class="com.spring.core.constructor.di.MyController2">
+		<constructor-arg index="0" ref="myService2Bean"/>
+		<constructor-arg index="1" value="MyName"/>
+	</bean>
+ 
+</beans>
